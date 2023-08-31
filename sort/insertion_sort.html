@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insertion Sort</title>
+</head>
+<body>
+    <h1>Insertion Sort</h1>
+    <pre>
+        def insertionSort(arr):
+            n = len(arr) 
+            for j in range(1, n):  
+            key = arr[j] 
+            i = j-1
+            while i >= 0 and arr[i] > key: 
+                arr[i+1] = arr[i]
+                i -= 1
+            arr[i+1] = key 
+
+        arr = [12, 11, 13, 5, 6]
+        insertionSort(arr)
+        print(arr)
+    </pre>
+    <img src="/images/insertion_sort.png" style="display: block;">
+    <a href="/.." style="margin: 10px 0; display: block;">back</a>
+</body>
+</html>
