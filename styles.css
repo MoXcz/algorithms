@@ -1,0 +1,14 @@
+.main_text {
+    font-size: 30px;
+}
+
+.sort_types {
+    padding: 10px 0;
+    display: block;
+}
+
+.image {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+}
