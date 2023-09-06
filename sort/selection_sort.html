@@ -4,8 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Selection Sort</title>
+    <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
+    <h1>Selection Sort</h1>
+    <pre>
+    def selectionSort(array, n):
+        for index in range(n):
+            min_index = index
+            for j in range(index + 1, n):
+                if array[j] < array[min_index]:
+                    min_index = j
+            (array[index], array[min_index]) = (array[min_index], array[index])
+        
+    arr = [12, 11, 13, 10, 5, 6, 1]
+    n = len(arr)
+    selectionSort(arr, n)
+    print(arr)
+    </pre>
+    <img src="../images/selection_sort.png" alt="insertion sort" class="image">
     <a href="../index.html" style="margin: 10px 0; display: block;">back</a>
 </body>
 </html>
