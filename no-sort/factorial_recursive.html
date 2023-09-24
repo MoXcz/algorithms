@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial Recursive</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <h1>Factorial Recursive</h1>
+    <pre>
+    def factorial_recursive(n):
+        if n <= 1:
+            return 1
+        else:
+            return n * factorial_recursive(n-1)
+    print(factorial_recursive(6))
+    </pre>
+    <h2>Metodo Maestro</h2>
+    <pre>
+    n!=n⋅(n−1)!
+
+    T(n)=n⋅T(n−1)
+
+    T(n)=a⋅T(b/n)+f(n)
+    </pre>
+    <p>La expresion factorial tiene que tanto el valor b como el valor a, son expresados por una variable n, por lo que el metodo maestro no aplica. Aun asi, de la expresion se puede deducir que el algoritmo tarda n(n-1)!</p>
+    <img src="../images/factorial_recursive.png" alt="factorial recursively" class="image">
+    <a href="../index.html" style="margin: 10px 0; display: block;">back</a>
+</body>
+</html>

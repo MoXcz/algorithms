@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master Theorem Exceptions</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <h1>Master Theorem Exceptions</h1>
+    <ol>
+        <li><strong>Recurrencia no recursiva:</strong> Si se tiene una función que no tiene una estructura recursiva, el método maestro no tiene sentido. Por ejemplo:</li>
+        <pre>
+            T(n) = 2n + 5
+        </pre>
+
+        <li><strong>Dependencia no matemática:</strong> Si la recurrencia involucra dependencias que no pueden expresarse en términos matemáticos simples, el método maestro no es aplicable. Por ejemplo:</li>
+        <pre>
+            T(n) = Tiempo actual + Tiempo de red
+        </pre>
+
+        <li><strong>Funciones no acotadas:</strong> Si la función no está acotada y no tiene un límite superior o no converge a un valor constante a medida que n crece, el método maestro no se puede aplicar. Por ejemplo:</li>
+        <pre>
+            T(n) = 2^n
+        </pre>
+    </ol>
+    <a href="../index.html" style="margin: 10px 0; display: block;">back</a>
+</body>
+</html>
