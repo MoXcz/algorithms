@@ -54,22 +54,37 @@
                 arr[i] = invert_arr[i]
             return arr
         
+        def prime_number(n:int):
+            if n == 1 or n < 0:
+                return
+            else:
+                for i in range(2,n):
+                   if (n % i) == 0:
+                       text = n,"no es un numero primo", i,"*",n//i,"=",n
+                       break
+                else:
+                   text = n,"es un numero primo"
+            return text
+        
         arr = [12, 11, 13, 10, 5, 6, 1]
         arr_1 = [12, 11, 13, 10, 5, 6, 1]
         arr_2 = []
         arr_3 = [12, 11, 13, 10, 5, 6, 1]
         n=10
+        n_2 = 213
         selectionSort(arr)
         insertionSort(arr_1)
         fibonacci(arr_2, n)
         invert(arr_3)
+        
         print("Seleciton Sort:", arr)
         print("Insertion Sort:", arr_1)
         print("Factorial:", factorial(6))
         print("Fibonacci:", arr_2)
         print("Reversed List:", arr_3)
+        print(prime_number(n_2))
     </pre>
-    <img src="images/1.png" alt="code" class="image">
+    <img src="images/exercise_function.png" alt="code" class="image">
     <a href="../practice_2_index.html" style="margin: 10px 0; display: block;">back</a>
 </body>
 </html>
