@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3</title>
+    <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+    <h2>3</h2>
+    <p>Escribir un programa que guarde en un diccionario los precios de las frutas de la tabla, pregunte al usuario por una fruta, un número de kilos y muestre por pantalla el precio de ese número de kilos de fruta. Si la fruta no está en el diccionario debe mostrar un mensaje informando de ello. Fruta	Precio Plátano	1.35 Manzana	0.80 Pera	0.85 Naranja	0.70</p>
+    <pre>
+    def precio_fruta(f):
+        fruta = input('¿Qué fruta quieres? ').title()
+        kilos = float(input('¿Cuántos kilos? '))
+        if fruta in f:
+            print(kilos, 'kilos de', fruta, 'valen', f[fruta]*kilos, '€')
+        else: 
+            print("La fruta", fruta, "no existe.")
+            
+    precio_fruta({'Platano':1.35, 'Manzana':0.80, 'Pera':0.85, 'Naranja':0.70})
+    </pre>
+    <img src="images/3.png" alt="code" class="image">
+    <a href="../practice_3_index.html" style="margin: 10px 0; display: block;">back</a>
+</body>
+</html>

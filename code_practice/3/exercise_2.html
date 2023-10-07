@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2</title>
+    <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+    <h2>2</h2>
+    <p>Escribir un programa que pregunte al usuario su nombre, edad, dirección y teléfono y lo guarde en un diccionario. Después debe mostrar por pantalla el mensaje "nombre" tiene "edad" años, vive en "dirección" y su número de teléfono es "teléfono".</p>
+    <pre>
+    def persona(n, e, d, t):
+        p = {'nombre': n, 'edad': e, 'direccion': d, 'telefono': t}
+        print(p['nombre'], 'tiene', p['edad'], 'años, vive en', p['direccion'], 'y su número de teléfono es', p['telefono'])
+        
+    nombre = input('¿Cómo te llamas? ')
+    edad = input('¿Cuántos años tienes? ')
+    direccion = input('¿Cuál es tu dirección? ')
+    telefono = input('¿Cuál es tu número de teléfono? ')
+    
+    persona(nombre, edad, direccion, telefono)
+    </pre>
+    <img src="images/2.png" alt="code" class="image">
+    <a href="../practice_3_index.html" style="margin: 10px 0; display: block;">back</a>
+</body>
+</html>
