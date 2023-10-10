@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linear</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <h1>Linear</h1>
+    <pre>
+    def linear_algorithm(v):
+        c = 0
+        n = len(v)
+        for i in range(0,n):
+            if v[0] > v[i]:
+                a = v[i]
+                b = v[0]
+            elif v[0] < v[i]: 
+                a = v[0]
+                b = v[i]
+        for i in range(0,n):
+            if v[i] == a:
+                c+=1
+        for i in range(0,c):
+            v[i] = a
+        for i in range(c, n):
+            v[i] = b
+    
+    ve = [7,8,7,7,8,8,8,7,7,8,7,8,7]
+    linear_algorithm(ve)
+    print(ve)
+    </pre>
+    <img src="../images/linear.png" alt="linear" class="image">
+    <a href="../index.html" style="margin: 10px 0; display: block;">back</a>
+</body>
+</html>
