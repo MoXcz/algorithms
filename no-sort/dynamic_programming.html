@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Programming</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <h1>Dynamic Programming</h1>
+    <pre class="code">
+    def binary_search (A, index, start, end):
+        mid = int((start+end)/2)
+        if index == A[mid]:
+            return mid
+        elif start == end+1:
+            if A[mid] < index:
+                return mid
+            else:
+                return -1
+        elif index < A[mid]:
+            return binary_search(A, index, 0, mid-1)
+        else:
+            return binary_search(A, index, mid+1, end)
+        
+    n=8
+    p=[]
+    #tasks[0] valor de inicio, tasks[1] valor de finalizacion y tasks[2] peso 
+    tasks = [[0, 6, 3], [1, 4, 5], [3, 5, 1], [3, 8, 8], [4, 7, 4], [5, 9, 4], [6, 10, 2], [4, 11, 3]]
+    from operator import itemgetter
+    tasks = sorted(tasks, key = itemgetter(1)) #Ordenar las tasks con el indice 1 de las listas en tasks
+    for i,t in enumerate(tasks): #Imprimir las tareas en orden de finalizacion
+        print(f'Trabajo {i+1} => finaliza en {t[1]}')
+
+    '''
+    Probar que binary_search funciona
+    f1=[4, 5, 6, 7, 8, 9, 10, 11]
+    f=[4, 10]
+    binary_search(f, 6, 0, 1)
+    '''
+
+    t_f = [] #almacena los tiempos de finalizacion de tasks
+    weights = list() #almacena los pesos de tasks
+    for i in tasks: #Iteracion de las listas en tasks
+        t_f.append(i[1])
+        weights.append(i[2])
+    print(t_f)
+
+    w = []
+    print(tasks)
+    for index, trabajo in enumerate(tasks): #Se enumeran las listas en tasks con un indece (index) a traves de trabajo
+        print(f'Trabajo {index+1}, inicia {trabajo[0]}, lista de tiempos finales {t_f}')
+        w.append(binary_search(t_f, trabajo[0], 0, 7))
+
+    def computeOpt(j, p, w):
+        if j == 0:
+            return 0
+        else:
+            return max(computeOpt(j-1, p, w), w[j]+computeOpt(p[j], p, w))
+        
+    p.insert(0, 0)
+    weights.insert(0, 0)
+    print(p[8])
+    print(computeOpt(8, p, weights))
+    </pre>
+    <a href="../index.html" style="margin: 10px 0; display: block;">back</a>
+</body>
+</html>
