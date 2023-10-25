@@ -16,11 +16,7 @@
 
 .code {
     font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace;
-}
-.code {
     padding: 1.5em 1em;
-}
-.code, code {
     background: rgba(135, 131, 120, 0.15);
     border-radius: 3px;
     padding: 0.2em 0.4em;
